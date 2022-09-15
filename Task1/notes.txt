@@ -1,0 +1,28 @@
+Тип массивов NumPy - ndarray.
+
+import numpy as np
+
+Методы:
+np.array()
+np.arange(start, stop, step, like)
+np.linspace(start, stop, num, endpoint, retstep, dtype, axis)
+if endpoint = True, stop включен в отрезок
+retstep (False по умолчанию) возвращвет шаг.
+
+np.zeros() массив нулей
+np.ones() массив единиц
+
+np.min()
+np.max()
+np.sqrt()
+np.exp()
+np.abs()
+np.argmin()
+np.argmax()
+и т.д.
+
+a = np.array([1, 2, 3], dtype=float)
+
+Доступ к элементам: a[index], жно использовать отрицательные индексы
+
+np.array.size - размер
