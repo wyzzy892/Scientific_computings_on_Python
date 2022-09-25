@@ -1,0 +1,121 @@
+Matplotlib предназначена для создания двумерной и трехмерной графики. Основной тип 
+данных - массив ndarray (NumPy). 
+Возможность рисования 
+- в прямоугольных и полярных координатах,
+- диаграмм рассеяния (scatter plot),
+- графиков с указанием величин ошибок (errorbar),
+- гистограмм (hist),
+- круговых и столбчатых диаграмм (pie chart, bar chart),
+- двумерных распределений скалярных и векторных величин и т.д.
+
+Базовые функции для рисования графиков в matplotlib.pyplot.
+Импортирование - import matplotlib.pyplot as plt
+- plot(x, y, args) - рисование графика,
+- plt.show() - вывод графика.
+Если написать plot(x), то в качестве точек абсцисс будут использованы индексы массива x.
+Для создания массива координат можно использовать linspace (NumPy).
+
+Все объекты в Matplotlib имеют иерархическую (древоподобную) структуру. 
+Основными элементами являются рисунок(объект класса figure), является контейнером для остальных 
+элементов. Панели(axes) располагаются на рисунке, на которой располагаются оси координат(axis).
+
+Создание окна: fig = plt.figure(figsize=(width, height))
+Добавление в окно рисунка панелей: fig.add_subplot(nrows, ncols, index)
+nrows - количество строк,
+ncols - количество столбцов,
+index - индекс ячейки.
+
+Настройка:
+set_xlim(a, b)
+set_ylim(a, b)
+set_xlabel(str)
+set_ylabel(str)
+set_title(str)
+set_xscale(str)
+set_yscale(str)
+legend()
+grid()
+Также их можно вводить как параметры axes в методе set.
+
+Графики:
+hist, errorbar, pie, bar, contour, contourf.
+Сохранение рисунка - savefig(str)
+
+Основные параметры рисунка:
+- title,
+- legend,
+- plot,
+- major ticks,
+- minor ticks,
+- major grid,
+- minor grid,
+- linewidth,
+- color,
+- linestyle, 
+- marker,
+- markersize
+
+Colors:
+'b' - blue
+'g' - green
+'r' - red
+'c' - cyan
+'m' - magenta
+'y' - yellow
+'k' - black
+'w' - white
+
+Linestyles:
+'-' solid , 
+'--' dashed,
+'-.' dash-dot, 
+':' dotted
+
+Markers:
+'.' - point marker
+',' - pixel
+'o' - circle
+'v' - trianle down
+'^' - triangle up
+'<' - triangle left
+'>' - triangle right
+'1' - tri down
+'2' - tri up
+'3' - tri left
+'4' - tri right
+'8' - octagon
+'s' - square
+'p' - pentagon
+'P' - plus
+'*' - star
+'h' - hexagon1
+'H' - hexagon2
+'+' - plus
+'x' - x
+'X' - x filled
+'D' - diamond
+'d' - thin diamond
+'|' - vline
+'_' - hline
+
+'b'    # blue markers with default shape
+'or'   # red circles
+'-g'   # green solid line
+'--'   # dashed line with default color
+'^k:'  # black triangle_up markers connected by a dotted line
+
+Двумерные графики
+contour(x, y, f, levels=[values_list], args)
+где f = f(x,y)
+Параметры: cmap.
+
+Матрица координат:
+xx, yy = meshgrid(x, y)
+
+Векторное поле:
+quiver(xx, yy)
+
+Визуализация данных из текстовых файлов:
+loadtxt()
+
+Математические символы (команды TeX): r"$\sum_ix_i$" и т.д.
